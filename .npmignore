@@ -1,0 +1,13 @@
+coverage/
+tests/
+tmp/
+.vs/
+
+gruntfile.js
+karma.conf.js
+tsconfig.json
+webpack.config.js
+.eslintrc
+.eslintignore
+.travis.yml
+*package-lock.json

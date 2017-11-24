@@ -1,0 +1,35 @@
+{
+	"name": "@mindbox/localization",
+	"version": "0.0.3",
+	"description": "Localization's wrappers",
+	"keywords": [
+		"typescript"
+	],
+	"main": "./js/index.js",
+	"types": "index.d.ts",
+	"scripts": {
+		"build": "webpack",
+		"build-production": "webpack -p"
+	},
+	"author": {
+		"name": "Mindbox"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mindbox-moscow/Localization.git"
+	},
+	"devDependencies": {
+		"source-map-loader": "^0.1.5",
+		"ts-loader": "^1.2.0",
+		"typescript": "2.1.6",
+		"webpack": "^3.0.0",
+		"@types/react": "=15.0.1"
+	},
+	"dependencies": {
+		"react": "^15.6.2"
+	},
+	"bugs": {
+		"url": "https://github.com/mindbox-moscow/Localization/issues"
+	}
+}
