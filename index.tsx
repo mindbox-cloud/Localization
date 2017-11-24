@@ -7,7 +7,7 @@ interface LocalizationParameters {
 declare global {
 	interface Window {
 		tr?: (label: string, parameters?: LocalizationParameters) => string;
-		// trs?: Function;
+		trl?: (label: string, parameters?: LocalizationParameters) => string;
 	}
 }
 
@@ -35,7 +35,7 @@ export function tr(label: string, parameters?: LocalizationParameters, spanClass
  * @param label String which need to translate
  * @param parameters If translating string include any template, I have to pass object with value, read more https://help.localizejs.com/docs/library-api#section-localize-translate
  */
-export function trs(label: string, parameters: LocalizationParameters): string {
+export function trl(label: string, parameters: LocalizationParameters): string {
 	if (!window.tr || !label) {
 		return label;
 	}
