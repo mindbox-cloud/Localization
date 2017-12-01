@@ -1,6 +1,6 @@
 {
 	"name": "@mindbox/localization",
-	"version": "0.0.4",
+	"version": "0.0.9",
 	"description": "Localization's wrappers",
 	"keywords": [
 		"typescript"
@@ -22,12 +22,12 @@
 	"devDependencies": {
 		"source-map-loader": "^0.1.5",
 		"ts-loader": "^1.2.0",
-		"typescript": "2.1.6",
+		"typescript": "2.5",
 		"webpack": "^3.0.0",
-		"@types/react": "=15.0.1"
+		"@types/react": "=15.6.7"
 	},
 	"dependencies": {
-		"react": "^15.6.2"
+		"react": "^15.6.1"
 	},
 	"bugs": {
 		"url": "https://github.com/mindbox-moscow/Localization/issues"

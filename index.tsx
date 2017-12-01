@@ -1,13 +1,8 @@
 ﻿import * as React from 'react';
 
-interface LocalizationParameters {
-	[name: string]: string;
-}
-
 declare global {
 	interface Window {
-		tr?: (label: string, parameters?: LocalizationParameters) => string;
-		trl?: (label: string, parameters?: LocalizationParameters) => string;
+		tr?: Function;
 	}
 }
 
@@ -17,15 +12,11 @@ declare global {
  * @param parameters If translating string include any template, I have to pass object with value, read more https://help.localizejs.com/docs/library-api#section-localize-translate
  * @param spanClassName Use for passing additional classes
  */
-export function tr(label: string, parameters?: LocalizationParameters, spanClassName?: string): JSX.Element {
-	const result = !window.tr || !label
-		? label
-		: window.tr(label, parameters);
-
+export function tr(label: string, parameters: object = null, spanClassName: string = null): JSX.Element {
 	return (
 		<span
 			className={spanClassName}
-			dangerouslySetInnerHTML={{ __html: result }}>
+			dangerouslySetInnerHTML={{ __html: window.tr(label, parameters) }}>
 		</span>);
 }
 
@@ -35,10 +26,6 @@ export function tr(label: string, parameters?: LocalizationParameters, spanClass
  * @param label String which need to translate
  * @param parameters If translating string include any template, I have to pass object with value, read more https://help.localizejs.com/docs/library-api#section-localize-translate
  */
-export function trl(label: string, parameters: LocalizationParameters): string {
-	if (!window.tr || !label) {
-		return label;
-	}
-
-	return window.tr(label, parameters);
+export function trl(label: string, parameters: object = null): string {
+	return window.tr(label, parameters).replace(/(<\/?[\w\s='":]+\/?>)/g, "");
 }
