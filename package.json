@@ -1,6 +1,6 @@
 {
 	"name": "@mindbox/localization",
-	"version": "0.0.10",
+	"version": "0.0.12",
 	"description": "Localization's wrappers",
 	"keywords": [
 		"typescript"

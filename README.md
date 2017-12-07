@@ -9,5 +9,5 @@ npm install --save @mindbox/localization
 
 ### Build
 ```shell
-webpack -p
+tsc index.tsx --outDir ./js/ --target es5 --jsx react
 ```

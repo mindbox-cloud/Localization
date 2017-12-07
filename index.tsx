@@ -1,4 +1,4 @@
-﻿import * as React from 'react';
+﻿import * as React from "react";
 
 declare global {
 	interface Window {
@@ -9,7 +9,8 @@ declare global {
 /**
  * Method for translating react-components
  * @param label String which needs to translate
- * @param parameters If translating string include any template, You have to pass object with value, read more https://help.localizejs.com/docs/library-api#section-localize-translate
+ * @param parameters If translating string include any template, You have to pass object with value,
+ * read more https://help.localizejs.com/docs/library-api#section-localize-translate
  * @param spanClassName Use for passing additional classes
  */
 export function tr(label: string, parameters: object = null, spanClassName: string = null): JSX.Element {
@@ -24,7 +25,8 @@ export function tr(label: string, parameters: object = null, spanClassName: stri
 /**
  * Method for translating only string
  * @param label String which needs to translate
- * @param parameters If translating string include any template, You have to pass object with value, read more https://help.localizejs.com/docs/library-api#section-localize-translate
+ * @param parameters If translating string include any template, You have to pass object with value,
+ * read more https://help.localizejs.com/docs/library-api#section-localize-translate
  */
 export function trl(label: string, parameters: object = null): string {
 	return window.tr(label, parameters).replace(/(<\/?[\w\s='":]+\/?>)/g, "");
@@ -33,7 +35,8 @@ export function trl(label: string, parameters: object = null): string {
 /**
  * Method for translating only string or react-component
  * @param label String which needs to translate
- * @param parameters If translating string include any template, You have to pass object with value, read more https://help.localizejs.com/docs/library-api#section-localize-translate
+ * @param parameters If translating string include any template, You have to pass object with value,
+ * read more https://help.localizejs.com/docs/library-api#section-localize-translate
  */
 export function tre(label: string | JSX.Element, parameters: object = null): string | JSX.Element {
 	if (typeof label === "string")
