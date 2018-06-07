@@ -29,7 +29,7 @@ export function tr(label: string, parameters: object = null, spanClassName: stri
  * read more https://help.localizejs.com/docs/library-api#section-localize-translate
  */
 export function trl(label: string, parameters: object = null): string {
-	return (label)
+	return label != null && label != ""
 		? window.tr(label, parameters).replace(/(<\/?[\w\s='":]+\/?>)/g, "")
 		: label;
 }
