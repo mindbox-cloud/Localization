@@ -16,7 +16,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mindbox-moscow/Localization.git"
+		"url": "https://github.com/mindbox-cloud/Localization.git"
 	},
 	"devDependencies": {
 		"source-map-loader": "^0.1.5",
@@ -29,6 +29,6 @@
 		"react": "^15.6.1"
 	},
 	"bugs": {
-		"url": "https://github.com/mindbox-moscow/Localization/issues"
+		"url": "https://github.com/mindbox-cloud/Localization/issues"
 	}
 }
